@@ -1,0 +1,45 @@
+{
+    "name": "ultipro-app-translator",
+    "version": "1.2.4",
+    "description": "Translation utility for the UltiPro App",
+    "main": "./dist/src/index.js",
+    "scripts": {
+        "start": "node ./dist/src/index.js",
+        "cli": "node ./dist/src/cli.js",
+        "cli:set": "node ./dist/src/cli.js set testing \"testing\"",
+        "cli:unset": "node ./dist/src/cli.js unset",
+        "cli:set:map": "node ./dist/src/cli.js set:map",
+        "cli:export": "node ./dist/src/cli.js export",
+        "cli:import": "node ./dist/src/cli.js import ./mock/test-import",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "finder": "node ./dist/src/finder.js",
+        "build": "tsc && chmod +x ./dist/src/cli.js",
+        "commit": "npx git-cz"
+    },
+    "bin": {
+        "uat": "./dist/src/cli.js"
+    },
+    "author": "Justin Cuaresma <justin_cuaresma@ultimatesoftware.com>",
+    "license": "ISC",
+    "dependencies": {
+        "commander": "^3.0.0",
+        "csv-parse": "^4.4.6",
+        "dedupe": "^3.0.1",
+        "glob": "^7.1.4",
+        "tedious": "~6.4.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.5.5",
+        "@babel/preset-env": "^7.5.5",
+        "@babel/preset-typescript": "^7.3.3",
+        "@types/glob": "^7.1.1",
+        "@types/jest": "^24.0.18",
+        "@types/tedious": "^4.0.0",
+        "babel-jest": "^24.9.0",
+        "jest": "^24.9.0",
+        "prettier": "1.18.2",
+        "ts-jest": "^24.0.2",
+        "typescript": "^3.6.3"
+    }
+}
